@@ -108,9 +108,9 @@ public class PokerHelper {
 		
 		BigDecimal player1Prob,player2Prob;
 		for(int i = 0;i < sizeGames;i++) {
-			player1Prob = BigDecimal.valueOf(probabilitiesPlayer1.get(i)).setScale(15, RoundingMode.HALF_UP);
-			player2Prob = BigDecimal.valueOf(probabilitiesPlayer2.get(i)).setScale(15, RoundingMode.HALF_UP);
-			buffer.append("     "+player1Prob+"%    |   "+player2Prob+"%"+System.lineSeparator());
+			player1Prob = BigDecimal.valueOf(probabilitiesPlayer1.get(i)).setScale(2, RoundingMode.HALF_UP);
+			player2Prob = BigDecimal.valueOf(probabilitiesPlayer2.get(i)).setScale(2, RoundingMode.HALF_UP);
+			buffer.append("         "+player1Prob+"%             |        "+player2Prob+"%"+System.lineSeparator());
 		}
 
 		FileWriter writer = new FileWriter(file);
